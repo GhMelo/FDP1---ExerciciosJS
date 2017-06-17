@@ -1,0 +1,40 @@
+<html>
+    <script>
+        calculodeCamisetas =function(){
+        }
+        Funcionario =function(){
+
+        }
+        calculodeCamisetas.prototype.valorCompra =function(){
+            camisetasP =document.getElementById("camisetasP").value;
+            camisetasM =document.getElementById("camisetasM").value;
+            camisetasG =document.getElementById("camisetasG").value;
+            valorTotal = parseInt(camisetasP*10)+parseInt(camisetasM*12)+parseInt(camisetasG*15);
+            window.alert("O valor da compra sera: " + valorTotal);
+
+        }
+        Funcionario.prototype.calcularSalario=function(){
+            salarioCRU =document.getElementById("salariocru").value;
+            salariosemimposto = parseInt(salarioCRU) + parseInt(salarioCRU*0.15);
+            salariofinal = salariosemimposto - salariosemimposto*0.08;
+            window.alert("O salario final é: " + salariofinal);
+        }
+        Cami1 = new calculodeCamisetas();
+        Fun1 = new Funcionario();
+    </script>
+<body>
+<form>
+    <input id="camisetasP" placeholder="Qtd Pequenas">
+    <input id="camisetasM" placeholder="Qtd Medias">
+    <input id="camisetasG" placeholder="Qtd Grandes">
+    <input type="button"  onclick="Cami1.valorCompra()" value="CalcularValor">
+    <br>
+    <input id="salariocru" placeholder="salario inicial">
+    <input type="button"  onclick="Fun1.calcularSalario()" value="SalarioFinal">
+
+            
+            
+
+</form>
+</body>
+</html>
